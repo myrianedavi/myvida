@@ -21,6 +21,26 @@ function escreveDiv2(texto){
 
 }
 
+
+function escreverNumeros(){
+    let n = prompt("Digite um numero n: ");
+    n = parseInt(n);
+    let divResultado = document.getElementById("Resultado")
+    divResultado.innerHTML = "";
+    if (isNan(n) || n < 1){
+    divResultado.innerHTML="Por favor, insira um numero valido maior ou igual a 1.";
+    return;
+    }
+
+    for (let i = 1; 1 <= n; i++) {
+        divResultado.innerHTML += i + " ";
+    }
+
+}
+
+
+
+
     </script>
 </head>
 <body>
@@ -45,8 +65,8 @@ function escreveDiv2(texto){
 <button onclick="escreveDiv2()">Escrever</button> <br><br>
 
 
-
-
+<button onclick="escreverNumeros">Escrever</button>
+<div id="Resultado"></div>
 
 
 </body>
