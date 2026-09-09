@@ -43,7 +43,7 @@
     frutas[6] = 'Banana';
 
     function mostrarListaFrutas(){
-        const container = document.getElementById('minhaDiv');
+        const container = document.getElementById('minhaDiv2');
             for (var i = 0; i < frutas.length; i ++) {
                     var tag = '<h5>' + i + ' - ' + frutas[i] + '</h5>';
                     container.innerHTML += tag;
@@ -77,11 +77,11 @@
 
     <h1>Array de Frutas</h1>
 
-    <button onclick="mostrarListaLiguagem()">Criar Array</button> <br><br>
+    <button onclick="mostrarListaFrutas()">Criar Array</button> <br><br>
 
-    <button onclick="posicaoLingugens()">Posição no Array</button>
+    <button onclick="posicaoFrutas()">Posição no Array</button>
 
-    <div id="minhaDiv"></div>
+    <div id="minhaDiv2"></div>
 
 
 
