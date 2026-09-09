@@ -32,28 +32,28 @@
     }
 
 
-  let linguagens = Array();
+  let frutas = Array();
 
-    linguagens[0] = 'Melancia';
-    linguagens[1] = 'Amora';
-    linguagens[2] = 'Jaca';
-    linguagens[3] = 'Laranja';
-    linguagens[4] = 'Pera';
-    linguagens[5] = 'Uva';
-    linguagens[6] = 'Banana';
+    frutas[0] = 'Melancia';
+    frutas[1] = 'Amora';
+    frutas[2] = 'Jaca';
+    frutas[3] = 'Laranja';
+    frutas[4] = 'Pera';
+    frutas[5] = 'Uva';
+    frutas[6] = 'Banana';
 
-    function mostrarListaLiguagem(){
-        const container = document.getElementById('minhaDiv');
-            for (var i = 0; i < linguagens.length; i ++) {
-                    var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
+    function mostrarListaFrutas(){
+        const container = document.getElementById('minhaDiv4');
+            for (var i = 0; i < frutas.length; i ++) {
+                    var tag = '<h5>' + i + ' - ' + frutas[i] + '</h5>';
                     container.innerHTML += tag;
             }
 
     }
 
-    function posicaoLingugens(){
+    function posicaoFrutas(){
         var indice = prompt('Qual pisição da lista deseja consultar?');
-        alert(linguagens[indice]);
+        alert(frutas[indice]);
     }
 
     
@@ -81,7 +81,7 @@
 
     <button onclick="posicaoLingugens()">Posição no Array</button>
 
-    <div id="minhaDiv"></div>
+    <div id="minhaDiv4"></div>
 
 
 
