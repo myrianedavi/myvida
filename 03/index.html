@@ -32,6 +32,32 @@
     }
 
 
+  let linguagens = Array();
+
+    linguagens[0] = 'Melancia';
+    linguagens[1] = 'Amora';
+    linguagens[2] = 'Jaca';
+    linguagens[3] = 'Laranja';
+    linguagens[4] = 'Pera';
+    linguagens[5] = 'Uva';
+    linguagens[6] = 'Banana';
+
+    function mostrarListaLiguagem(){
+        const container = document.getElementById('minhaDiv');
+            for (var i = 0; i < linguagens.length; i ++) {
+                    var tag = '<h5>' + i + ' - ' + linguagens[i] + '</h5>';
+                    container.innerHTML += tag;
+            }
+
+    }
+
+    function posicaoLingugens(){
+        var indice = prompt('Qual pisição da lista deseja consultar?');
+        alert(linguagens[indice]);
+    }
+
+    
+
    </script>
 
 
@@ -45,6 +71,22 @@
     <button onclick="posicaoLingugens()">Posição no Array</button>
 
     <div id="minhaDiv"></div>
+
+
+   <br><br>
+
+    <h1>Array de Frutas</h1>
+
+    <button onclick="mostrarListaLiguagem()">Criar Array</button> <br><br>
+
+    <button onclick="posicaoLingugens()">Posição no Array</button>
+
+    <div id="minhaDiv"></div>
+
+
+
+
+
 
 </body>
 </html>
