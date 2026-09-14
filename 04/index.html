@@ -54,7 +54,11 @@ function limparLista(){
 
 
 function inverterPilha() {
-    
+    let pilhaAuxiliar
+    while (pilha.length > 0){
+        pilhaAuxiliar.push(pilha.pop());
+        return pilhaAuxiliar;
+    }
 
 }
 
