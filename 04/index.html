@@ -47,6 +47,25 @@ function remover() {
   }
 }
 
+function limparLista(){
+    pilhaPessoas = [];
+    mostraLista();
+}
+
+
+function inverterPilha() {
+    pilhaPessoas = [];
+    mostrarLista();
+}
+
+
+
+
+
+
+
+
+
    </script>
 
 
@@ -55,12 +74,17 @@ function remover() {
 
   
 
-    <h1>Array de Frutas</h1>
+    <h1>Lista de Pessoas</h1>
 
-    <button onclick="mostrarListaDePessoas()">Criar Array</button> <br><br>
+    <button onclick="adicionar()">Adicionar Pessoas</button> <br><br>
 
-    <button onclick="posicaoPessoas()">Posição no Array</button>
+    <button onclick="posicao()">Posição</button>
 
+    <button onclick="remover()">Remover</button>
+
+    <button onclick="limparLista()">Limpar</button>
+
+    <button onclick="inverterPilha()">Inverter Pilha</button>
     <div id="minhaDiv"></div>
 
 
