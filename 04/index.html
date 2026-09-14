@@ -6,36 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Array</title>
    <script>
+    let pilhaPessoas = Array();
 
-  let pessoas = Array();
+    function mostrarLista(){
+        const container = document.getElementById('minhaDiv');
+        container.innerHTML = '';
 
-    frutas[0] = 'Otavio';
-    frutas[1] = 'Amora';
-    frutas[2] = 'luis';
-    
 
-    function mostrarListaDePessoas(){
-        const container = document.getElementById('minhaDiv2');
-            for (var i = 0; i < pessoas.length; i ++) {
-                    var tag = '<h5>' + i + ' - ' + pessoas[i] + '</h5>';
-                    container.innerHTML += tag;
+
+            for(var i = 0; i < pilhaPessoas.length; i++) {
+                 var tag = '<h5>' + i + ' - ' + pilhaPessoas[i] + '</h5>'; 
+                container.innerHTML += tag;
             }
 
     }
+ 
+function adicionar(){
+    var nome = prompt('Qual o nome da pessoa?');
+    pilhaPessoas.push(nome);
+    mostrarLista();
+}
 
-    function posicaoPessoas(){
-        var indice = prompt('Qual pisição da lista deseja consultar?');
-        alert(frutas[indice]);
+function posicao() {
+    var indice = prompt('Qual posição da lista deseja consultar?');
+    indice = Number(indice);
+    if (indice < 0 || indice >= pilhaPessoas.length) {
+        alert('posição invalida!');
+        return;
     }
+    alert('Na posição '+indice+ ' está: ' +pilhaPessoas[indice] );
+}
 
-        let 
-
-
-    let frutas = ['', ''];
-    let removido = frutas.pop();
-    console.log(frutas);
-    console.log(removido);
-
+function remover() {
+    if (pilhaPessoas.length === 0){
+        alert('A piçha esta vazia!');
+    } else {
+        let
+}
 
 
    </script>
@@ -52,7 +59,7 @@
 
     <button onclick="posicaoPessoas()">Posição no Array</button>
 
-    <div id="minhaDiv2"></div>
+    <div id="minhaDiv"></div>
 
 
 
