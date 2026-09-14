@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+   <script>
+
+  let pessoas = Array();
+
+    frutas[0] = 'Otavio';
+    frutas[1] = 'Amora';
+    frutas[2] = 'luis';
+    
+
+    function mostrarListaDePessoas(){
+        const container = document.getElementById('minhaDiv2');
+            for (var i = 0; i < pessoas.length; i ++) {
+                    var tag = '<h5>' + i + ' - ' + pessoas[i] + '</h5>';
+                    container.innerHTML += tag;
+            }
+
+    }
+
+    function posicaoPessoas(){
+        var indice = prompt('Qual pisição da lista deseja consultar?');
+        alert(frutas[indice]);
+    }
+
+        let 
+
+
+    let frutas = ['', ''];
+    let removido = frutas.pop();
+    console.log(frutas);
+    console.log(removido);
+
+
+
+   </script>
+
+
+
+<body>
+
+  
+
+    <h1>Array de Frutas</h1>
+
+    <button onclick="mostrarListaDePessoas()">Criar Array</button> <br><br>
+
+    <button onclick="posicaoPessoas()">Posição no Array</button>
+
+    <div id="minhaDiv2"></div>
+
+
+
+
+
+
+</body>
+</html>
