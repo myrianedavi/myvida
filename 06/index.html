@@ -61,14 +61,14 @@
     }
 
     function remover() {
-      if (pilhaPessoas.length === 0) {
-        alert('A pilha está vazia!');
-      } else {
-        const removido = pilhaPessoas.pop();
-        alert('Removido: ' + removido.nome + ' - ' + removido.contato);
-        mostrarLista();
-      }
-    }
+    if (pilhaPessoas.length === 0) {
+    alert('A pilha está vazia!');
+  } else {
+    const removido = pilhaPessoas.pop();
+    alert('Removido: ' + removido.nome + ' - ' + removido.contato);
+    mostrarLista(); 
+  }
+}
 
     function inverterPilha() {
       pilhaPessoas.reverse();
@@ -112,12 +112,17 @@
 }
     
 	
-	function removerContato(indice) {
-  pilhaPessoas.splice(indice, 1);
+	
+ function removerContato(indice) {
+
   if (indiceEdicao === indice) {
-    indiceEdicao = null;
     limpaCampos();
+    indiceEdicao = null;
+  } else if (indiceEdicao !== null && indice < indiceEdicao) {
+    indiceEdicao--;
   }
+
+  pilhaPessoas.splice(indice, 1);
 
   mostrarLista();
 }
