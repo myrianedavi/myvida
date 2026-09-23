@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Livros</title>
+
+  <script>
+    
+    let pilhadeLivros = [];
+
+    function mostrarLista() {
+      const container = document.getElementById('minhaDiv');
+      container.innerHTML = ''; 
+
+      for (let i = 0; i < pilhadeLivros.length; i++) {
+        const livro = pilhadeLivros[i];
+        const tag = '<h5>' + i + '- titulo: ' + livro.titulo + ' | autor: '+ livro.autor + '</h5>';
+        container.innerHTML += tag;
+      }
+    }
+	
+	function limpaCampos() {
+	  document.getElementById('titulo').value = '';
+      document.getElementById('autor').value = '';
+	}
+
+    function adicionar() {
+	  // pega os valores digitados nos inputs
+  	  const titulo = document.getElementById('titulo').value;
+      const autor = document.getElementById('autor').value;
+
+      pilhadeLivros.push({ titulo, autor });
+
+      // limpa os campos e atualiza a lista
+	  limpaCampos();
+      mostrarLista();
+    }
+
+    function posicao() {
+      const indice = Number(prompt('Qual posição da lista deseja consultar?'));
+
+      if (indice < 0 || indice >= pilhadeLivros.length) {
+        alert('Posição inválida!');
+        return;
+      }
+
+      const livro = pilhadeLivros[indice];
+      alert('Na posição ' + indice + ' está: titulo: ' + pessoa.titulo + ' - autor: ' + livro.autor);
+    }
+
+    function limparLista() {
+      pilhadeLivros = [];
+      mostrarLista();
+    }
+
+    function remover() {
+      if (pilhadeLivros.length === 0) {
+        alert('A pilha está vazia!');
+      } else {
+        const removido = pilhadeLivros.pop();
+        alert('Removido: ' + removido.titulo + ' - ' + removido.autor);
+        mostrarLista();
+      }
+    }
+
+    function inverterPilha() {
+      pilhaPessoas.reverse();
+      mostrarLista();
+    }
+
+
+    let listaDeLivros = ["O Senhor dos Anéis", "1984", "O Pequeno Príncipe", "Dom Casmurro"];
+
+function inserirLivroPorPosicao() {
+  
+    let novoLivro = prompt("Digite o nome do livro que deseja inserir:");
+    
+    
+    if (!novoLivro) {
+        console.log("Inserção cancelada.");
+        return;
+    }
+
+   
+    let posicaoInput = prompt(`Digite a posição onde deseja inserir (0 a ${listaDeLivros.length}):`);
+    let posicao = parseInt(posicaoInput);
+
+   
+    if (isNaN(posicao) || posicao < 0 || posicao > listaDeLivros.length) {
+        console.log("Posição inválida! O livro não foi inserido.");
+        return;
+    }
+
+    
+    listaDeLivros.splice(posicao, 0, novoLivro);
+
+   
+    console.log("--- Lista de Livros Atualizada ---");
+    listaDeLivros.forEach((livro, index) => {
+        console.log(`${index}: ${livro}`);
+    });
+}
+
+  </script>
+</head>
+
+<body>
+  <h1>Lista de Pessoas</h1>
+
+	<label>Titulo:</label>
+	<input type="text" id="titulo" placeholder="Digite o titulo"> 
+
+	<label>Autor:</label>
+	<input type="text" id="autor" placeholder="Digite o autor">
+
+    <label>Ano:</label>
+	<input type="text" id="ano" placeholder="Digite o ano">
+
+	<button onclick="adicionar()">Adicionar</button>
+	
+	
+	<hr>
+
+    <button onclick="posicao()">Posição</button>
+    <button onclick="remover()">Remover Último</button>
+    <button onclick="limparLista()">Limpar Lista</button>
+    <button onclick="inverterPilha()">Inverter</button>
+
+    <br><br>
+  
+    <div id="minhaDiv"></div>
+  
+    <hr>
+  
+</body>
+</html>
