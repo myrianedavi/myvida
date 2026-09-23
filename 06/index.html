@@ -113,16 +113,14 @@
     
 	
 	function removerContato(indice) {
-      pilhaPessoas.splice(indice, 1);
-
+  pilhaPessoas.splice(indice, 1);
+  if (indiceEdicao === indice) {
     indiceEdicao = null;
     limpaCampos();
   }
 
   mostrarLista();
-
-	
-
+}
 	
   </script>
 </head>
